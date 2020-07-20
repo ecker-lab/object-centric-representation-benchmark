@@ -71,7 +71,7 @@ where --gt_file specifies the path to the ground truth annotation file, --pred_f
 
 ## Leaderboard
 Analysis of SOTA object-centric representation learning models for MOT. Results shown as mean ± standard deviation of three runs with different random training seeds. Models ranked according to MOTA for each dataset.
-If you achieve state-of-the-art performance on any of the three datasets with your approach, please open a pull request where you add the results in the table below. 
+If you want to add your own method and results on any of the three datasets, please open a pull request where you add the results in the tables below. 
 
 ### SpMOT
 
