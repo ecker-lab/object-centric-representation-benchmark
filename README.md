@@ -77,29 +77,29 @@ If you achieve state-of-the-art performance on any of the three datasets with yo
 
 Rank | Model | Reference | MOTA &uarr; | MOTP &darr; | MD &uarr; | MT &uarr; | Match &uarr; | Miss &darr; | ID S. &uarr; | FPs &uarr; | MSE &uarr; |
 :---:|:------:|:---------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
-1 | ViMON | Weis et al. 2020 | **92.9&nbsp;±&nbsp;0.2** | **91.8 ± 0.2** | 87.7 ± 0.8 | 87.2 ± 0.8 | 95.0 ± 0.2 | 4.8 ± 0.2 | **0.2 ± 0.0** | **2.1 ± 0.1** | **11.1 ± 0.6** |
-2 | OP3 | Veerapaneni et al. 2019 | 89.1 ± 5.1 | 78.4 ± 2.4 | **92.4 ± 4.0** | **91.8 ± 3.8** | **95.9 ± 2.2** | **3.7 ± 2.2** | 0.4 ± 0.0 | 6.8 ± 2.9 | 13.3 ± 11.9 |
-3 | TBA | He et al. 2019 | 79.7 ± 15.0 | 71.2 ± 0.3 | 83.4 ± 9.7 | 80.0 ± 13.6 | 87.8 ± 9.0 | 9.6 ± 6.0 | 2.6 ± 3.0 | 8.1 ± 6.0 | 11.9 ± 1.9 |
-4 | MONet | Burgess et al. 2019 | 70.2 ± 0.8 | 89.6 ± 1.0 | **92.4 ± 0.6** | 50.4 ± 2.4 | 75.3 ± 1.3 | 4.4 ± 0.4 | 20.3 ± 1.6 | 5.1 ± 0.5 | 13.0 ± 2.0 |
+1 | ViMON | Weis et al. 2020 | **92.9&nbsp;±&nbsp;0.2** | **91.8&nbsp;±&nbsp;0.2** | 87.7&nbsp;±&nbsp;0.8 | 87.2&nbsp;±&nbsp;0.8 | 95.0&nbsp;±&nbsp;0.2 | 4.8&nbsp;±&nbsp;0.2 | **0.2&nbsp;±&nbsp;0.0** | **2.1&nbsp;±&nbsp;0.1** | **11.1&nbsp;±&nbsp;0.6** |
+2 | OP3 | Veerapaneni et al. 2019 | 89.1&nbsp;±&nbsp;5.1 | 78.4&nbsp;±&nbsp;2.4 | **92.4&nbsp;±&nbsp;4.0** | **91.8&nbsp;±&nbsp;3.8** | **95.9&nbsp;±&nbsp;2.2** | **3.7&nbsp;±&nbsp;2.2** | 0.4&nbsp;±&nbsp;0.0 | 6.8&nbsp;±&nbsp;2.9 | 13.3&nbsp;±&nbsp;11.9 |
+3 | TBA | He et al. 2019 | 79.7&nbsp;±&nbsp;15.0 | 71.2&nbsp;±&nbsp;0.3 | 83.4&nbsp;±&nbsp;9.7 | 80.0&nbsp;±&nbsp;13.6 | 87.8&nbsp;±&nbsp;9.0 | 9.6&nbsp;±&nbsp;6.0 | 2.6&nbsp;±&nbsp;3.0 | 8.1&nbsp;±&nbsp;6.0 | 11.9&nbsp;±&nbsp;1.9 |
+4 | MONet | Burgess et al. 2019 | 70.2&nbsp;±&nbsp;0.8 | 89.6&nbsp;±&nbsp;1.0 | **92.4&nbsp;±&nbsp;0.6** | 50.4&nbsp;±&nbsp;2.4 | 75.3&nbsp;±&nbsp;1.3 | 4.4&nbsp;±&nbsp;0.4 | 20.3&nbsp;±&nbsp;1.6 | 5.1&nbsp;±&nbsp;0.5 | 13.0&nbsp;±&nbsp;2.0 |
 
 
 ### VMDS
 
 Rank | Model | Reference | MOTA &uarr; | MOTP &darr; | MD &uarr; | MT &uarr; | Match &uarr; | Miss &darr; | ID S. &uarr; | FPs &uarr; | MSE &uarr; |
 :---:|:------:|:---------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
-1 | OP3 | Veerapaneni et al. 2019 | **91.7 ± 1.7** | **93.6 ± 0.4** | **96.8 ± 0.5** | **96.3 ± 0.4** | **97.8 ± 0.1** | **2.0 ± 0.1** | **0.2 ± 0.0** | 6.1 ± 1.5 |**4.3 ± 0.2** |
-2 | ViMON | Weis et al. 2020 | 86.8 ± 0.3 | 86.8 ± 0.0 | 86.2 ± 0.3 | 85.0 ± 0.3 | 92.3 ± 0.2 | 7.0 ± 0.2 | 0.7 ± 0.0 | **5.5 ± 0.1** | 10.7 ± 0.1 |
-3 | TBA | He et al. 2019 | 54.5 ± 12.1 | 75.0 ± 0.9 | 62.9 ± 5.9 | 58.3 ± 6.1 | 75.9 ± 4.3 | 21.0 ± 4.2 | 3.2 ± 0.3 | 21.4 ± 7.8 | 28.1 ± 2.0 |
-4 | MONet | Burgess et al. 2019 | 49.4 ± 3.6 | 78.6 ± 1.8 | 74.2 ± 1.7 | 35.7 ± 0.8 | 66.7 ± 0.7 | 13.6 ± 1.0 | 19.7 ± 0.6 | 17.2 ± 3.1 | 22.2 ± 2.2 |
+1 | OP3 | Veerapaneni et al. 2019 | **91.7&nbsp;±&nbsp;1.7** | **93.6&nbsp;±&nbsp;0.4** | **96.8&nbsp;±&nbsp;0.5** | **96.3&nbsp;±&nbsp;0.4** | **97.8&nbsp;±&nbsp;0.1** | **2.0&nbsp;±&nbsp;0.1** | **0.2&nbsp;±&nbsp;0.0** | 6.1&nbsp;±&nbsp;1.5 |**4.3&nbsp;±&nbsp;0.2** |
+2 | ViMON | Weis et al. 2020 | 86.8&nbsp;±&nbsp;0.3 | 86.8&nbsp;±&nbsp;0.0 | 86.2&nbsp;±&nbsp;0.3 | 85.0&nbsp;±&nbsp;0.3 | 92.3&nbsp;±&nbsp;0.2 | 7.0&nbsp;±&nbsp;0.2 | 0.7&nbsp;±&nbsp;0.0 | **5.5&nbsp;±&nbsp;0.1** | 10.7&nbsp;±&nbsp;0.1 |
+3 | TBA | He et al. 2019 | 54.5&nbsp;±&nbsp;12.1 | 75.0&nbsp;±&nbsp;0.9 | 62.9&nbsp;±&nbsp;5.9 | 58.3&nbsp;±&nbsp;6.1 | 75.9&nbsp;±&nbsp;4.3 | 21.0&nbsp;±&nbsp;4.2 | 3.2&nbsp;±&nbsp;0.3 | 21.4&nbsp;±&nbsp;7.8 | 28.1&nbsp;±&nbsp;2.0 |
+4 | MONet | Burgess et al. 2019 | 49.4&nbsp;±&nbsp;3.6 | 78.6&nbsp;±&nbsp;1.8 | 74.2&nbsp;±&nbsp;1.7 | 35.7&nbsp;±&nbsp;0.8 | 66.7&nbsp;±&nbsp;0.7 | 13.6&nbsp;±&nbsp;1.0 | 19.7&nbsp;±&nbsp;0.6 | 17.2&nbsp;±&nbsp;3.1 | 22.2&nbsp;±&nbsp;2.2 |
 
 
 ### VOR
 
 Rank | Model | Reference | MOTA &uarr; | MOTP &darr; | MD &uarr; | MT &uarr; | Match &uarr; | Miss &darr; | ID S. &uarr; | FPs &uarr; | MSE &uarr; |
 :---:|:------:|:---------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
-1 | ViMON | Weis et al. 2020 | **89.0 ± 0.0** | **89.5 ± 0.5** | **90.4 ± 0.5** | **90.0 ± 0.4** | **93.2 ± 0.4** | **6.5 ± 0.4** | **0.3 ± 0.0** | **4.2 ± 0.4** | 6.4 ± 0.6 |
-2 | OP3 | Veerapaneni et al. 2019 | 65.4 ± 0.6 | 89.0 ± 0.6 | 88.0 ± 0.6 | 85.4 ± 0.5 | 90.7 ± 0.3 | 8.2 ± 0.4 | 1.1 ± 0.2 | 25.3 ± 0.6 | **3.0 ± 0.1** |
-3 | MONet | Burgess et al. 2019 | 37.0 ± 6.8 | 81.7 ± 0.5 | 76.9 ± 2.2 | 37.3 ± 7.8 | 64.4 ± 5.0 | 15.8 ± 1.6 | 19.8 ± 3.5 | 27.4 ± 2.3 | 12.2 ± 1.4 |
+1 | ViMON | Weis et al. 2020 | **89.0&nbsp;±&nbsp;0.0** | **89.5&nbsp;±&nbsp;0.5** | **90.4&nbsp;±&nbsp;0.5** | **90.0&nbsp;±&nbsp;0.4** | **93.2&nbsp;±&nbsp;0.4** | **6.5&nbsp;±&nbsp;0.4** | **0.3&nbsp;±&nbsp;0.0** | **4.2&nbsp;±&nbsp;0.4** | 6.4&nbsp;±&nbsp;0.6 |
+2 | OP3 | Veerapaneni et al. 2019 | 65.4&nbsp;±&nbsp;0.6 | 89.0&nbsp;±&nbsp;0.6 | 88.0&nbsp;±&nbsp;0.6 | 85.4&nbsp;±&nbsp;0.5 | 90.7&nbsp;±&nbsp;0.3 | 8.2&nbsp;±&nbsp;0.4 | 1.1&nbsp;±&nbsp;0.2 | 25.3&nbsp;±&nbsp;0.6 | **3.0&nbsp;±&nbsp;0.1** |
+3 | MONet | Burgess et al. 2019 | 37.0&nbsp;±&nbsp;6.8 | 81.7&nbsp;±&nbsp;0.5 | 76.9&nbsp;±&nbsp;2.2 | 37.3&nbsp;±&nbsp;7.8 | 64.4&nbsp;±&nbsp;5.0 | 15.8&nbsp;±&nbsp;1.6 | 19.8&nbsp;±&nbsp;3.5 | 27.4&nbsp;±&nbsp;2.3 | 12.2&nbsp;±&nbsp;1.4 |
 
 
 ## Citation
