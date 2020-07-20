@@ -1,0 +1,29 @@
+{
+    "model": {
+        "n_slots": 6
+    },
+    "vae": {
+        "latent_dim": 16
+    },
+    "gru": {
+        "latent_dim": 128
+    },
+    "data": {
+        "name": "vmds",
+        "im_size": 64,
+        "batch_size": 16,
+        "n_steps": 10,
+        "num_workers": 1,
+        "path": "ocrb/data/datasets"
+    },
+    "optimizer": {
+        "lr": 0.0001
+    },
+    "trainer": {
+        "epochs": 500,
+        "ckpt_dir": "ocrb/vimon/ckpts",
+        "log_loss_every": 50,
+        "beta": 1.0,
+        "gamma": 2.0
+    }
+}
