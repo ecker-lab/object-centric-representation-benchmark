@@ -67,7 +67,7 @@ To compute MOT metrics, run:
 ```
 python3 ocrb/eval/eval_mot.py --gt_file='ocrb/data/gt_jsons/vmds_test.json' --pred_file='ocrb/vimon/ckpts/pretrained/vmds_pred_list.json' --results_path='ocrb/vimon/ckpts/pretrained/vmds_results.json' --exclude_bg
 ```
-where --gt_file specifies the path to the ground truth annotation file, --pred_file specifies the path to the annotation file with the model predictions and -results_path gives the path where to save the result dictionary.
+where --gt_file specifies the path to the ground truth annotation file, --pred_file specifies the path to the annotation file containing the model predictions and -results_path gives the path where to save the result dictionary. Set --exclude_bg to exclude background segmentations masks from the evaluation.
 
 ## Leaderboard
 Analysis of SOTA object-centric representation learning models for MOT. Results shown as mean ± standard deviation of three runs with different random training seeds. Models ranked according to MOTA for each dataset.
@@ -77,7 +77,7 @@ If you achieve state-of-the-art performance on any of the three datasets with yo
 
 Rank | Model | Reference | MOTA &uarr; | MOTP &darr; | MD &uarr; | MT &uarr; | Match &uarr; | Miss &darr; | ID S. &uarr; | FPs &uarr; | MSE &uarr; |
 :---:|:------:|:---------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
-1 | ViMON | Weis et al. 2020 | **92.9 ± 0.2** | **91.8 ± 0.2** | 87.7 ± 0.8 | 87.2 ± 0.8 | 95.0 ± 0.2 | 4.8 ± 0.2 | **0.2 ± 0.0** | **2.1 ± 0.1** | **11.1 ± 0.6** |
+1 | ViMON | Weis et al. 2020 | **92.9&nbsp;±&nbsp;0.2** | **91.8 ± 0.2** | 87.7 ± 0.8 | 87.2 ± 0.8 | 95.0 ± 0.2 | 4.8 ± 0.2 | **0.2 ± 0.0** | **2.1 ± 0.1** | **11.1 ± 0.6** |
 2 | OP3 | Veerapaneni et al. 2019 | 89.1 ± 5.1 | 78.4 ± 2.4 | **92.4 ± 4.0** | **91.8 ± 3.8** | **95.9 ± 2.2** | **3.7 ± 2.2** | 0.4 ± 0.0 | 6.8 ± 2.9 | 13.3 ± 11.9 |
 3 | TBA | He et al. 2019 | 79.7 ± 15.0 | 71.2 ± 0.3 | 83.4 ± 9.7 | 80.0 ± 13.6 | 87.8 ± 9.0 | 9.6 ± 6.0 | 2.6 ± 3.0 | 8.1 ± 6.0 | 11.9 ± 1.9 |
 4 | MONet | Burgess et al. 2019 | 70.2 ± 0.8 | 89.6 ± 1.0 | **92.4 ± 0.6** | 50.4 ± 2.4 | 75.3 ± 1.3 | 4.4 ± 0.4 | 20.3 ± 1.6 | 5.1 ± 0.5 | 13.0 ± 2.0 |
