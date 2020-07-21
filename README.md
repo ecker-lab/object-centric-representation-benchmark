@@ -1,5 +1,5 @@
 # Object-centric Representation Benchmark
-This repository contains code, data and a benchmark leaderboard from the paper [Unmasking the Inductive Biases of Unsupervised Object Representations for Video Sequences](https://arxiv.org/pdf/2006.07034.pdf).
+This repository contains code, data and a benchmark leaderboard from the paper [Unmasking the Inductive Biases of Unsupervised Object Representations for Video Sequences](https://arxiv.org/abs/2006.07034) by M.A. Weis, K. Chitta, Y. Sharma, W. Brendel, M. Bethge, A. Geiger and A.S. Ecker (2020).
 
 __Table of Contents__
 - [Installation](#installation)
@@ -30,7 +30,7 @@ Download data from [OSF](https://osf.io/ua6sk/?view_only=70080c40f5e6467d90b83b2
 
 __Available datasets:__
 - Video Multi-dSprites (VMDS)
-- Sprites-MOT (SpMOT) [[link]](https://github.com/zhen-he/tracking-by-animation)
+- Sprites-MOT (SpMOT) ([Generation Code](https://github.com/zhen-he/tracking-by-animation))
 - Video Object Room (VOR)
 
 ![Datasets](example_dataset.png?raw=true "Title")
