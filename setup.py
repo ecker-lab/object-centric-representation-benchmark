@@ -6,6 +6,7 @@ with open("README.md", "r") as fh:
 
 
 install_requires = [
+    "h5py",
     "numpy",
     "motmetrics==1.2.0",
     "torch==1.5.0",
