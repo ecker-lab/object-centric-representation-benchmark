@@ -1,5 +1,5 @@
 # Object-centric Representation Benchmark
-This repository contains code, data and a benchmark leaderboard from the paper [Unmasking the Inductive Biases of Unsupervised Object Representations for Video Sequences](https://arxiv.org/pdf/2006.07034.pdf).
+This repository contains code, data and a benchmark leaderboard from the paper [Unmasking the Inductive Biases of Unsupervised Object Representations for Video Sequences](https://arxiv.org/abs/2006.07034) by M.A. Weis, K. Chitta, Y. Sharma, W. Brendel, M. Bethge, A. Geiger and A.S. Ecker (2020).
 
 __Table of Contents__
 - [Installation](#installation)
@@ -30,7 +30,7 @@ Download data from [OSF](https://osf.io/ua6sk/?view_only=70080c40f5e6467d90b83b2
 
 __Available datasets:__
 - Video Multi-dSprites (VMDS)
-- Sprites-MOT (SpMOT) [[link]](https://github.com/zhen-he/tracking-by-animation)
+- Sprites-MOT (SpMOT) ([Generation Code](https://github.com/zhen-he/tracking-by-animation))
 - Video Object Room (VOR)
 
 ![Datasets](example_dataset.png?raw=true "Title")
@@ -71,7 +71,7 @@ where --gt_file specifies the path to the ground truth annotation file, --pred_f
 
 ## Leaderboard
 Analysis of SOTA object-centric representation learning models for MOT. Results shown as mean ± standard deviation of three runs with different random training seeds. Models ranked according to MOTA for each dataset.
-If you achieve state-of-the-art performance on any of the three datasets with your approach, please open a pull request where you add the results in the table below. 
+If you want to add your own method and results on any of the three datasets, please open a pull request where you add the results in the tables below. 
 
 ### SpMOT
 
