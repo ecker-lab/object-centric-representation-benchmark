@@ -30,7 +30,7 @@ Download data from [OSF](https://osf.io/ua6sk/?view_only=70080c40f5e6467d90b83b2
 
 __Available datasets:__
 - Video Multi-dSprites (VMDS)
-- Sprites-MOT (SpMOT) ([Generation Code](https://github.com/zhen-he/tracking-by-animation))
+- Sprites-MOT (SpMOT)
 - Video Object Room (VOR)
 
 ![Datasets](example_dataset.png?raw=true "Title")
@@ -52,6 +52,18 @@ python3 ocrb/vimon/main.py --config='ocrb/vimon/config.json'
 ```
 where hyperparameters are specified in the config file.
 
+
+### Training TBA
+For TBA training, the input datasets need to be pre-processed into batches, for which we provide a function:
+```
+python3 ocrb/tba/data/sprite/pt/create_batches.py
+```
+To run training:
+```
+python3 ocrb/tba/run.py --task sprite
+```
+the --task flag can be toggled between sprite (VMDS), spmot (SpMOT) and vor (VOR). For details regarding other training flags see the [original TBA repository.](https://github.com/zhen-he/tracking-by-animation)
+
     
 ## Evaluation
 ### Generating ViMON annotation file
@@ -61,7 +73,15 @@ python3 ocrb/vimon/generate_pred_json.py --config='ocrb/vimon/config.json' --ckp
 ```
 where hyperparameters including dataset are specified in ocrb/vimon/config.json file and --ckpt_file gives the path to the trained model weights.
 
-    
+
+### Generating TBA annotation file
+To generate annotation file for TBA, run:
+```
+python3 ocrb/tba/run.py --task sprite --metric 1 --v 2 --init_model sp_latest.pt
+```
+The annotation file is generated in the folder ocrb/tba/pic. For details regarding other evaluation flags see the [original TBA repository.](https://github.com/zhen-he/tracking-by-animation)
+
+
 ### Evaluating MOT metrics
 To compute MOT metrics, run:
 ```
@@ -69,9 +89,11 @@ python3 ocrb/eval/eval_mot.py --gt_file='ocrb/data/gt_jsons/vmds_test.json' --pr
 ```
 where --gt_file specifies the path to the ground truth annotation file, --pred_file specifies the path to the annotation file containing the model predictions and -results_path gives the path where to save the result dictionary. Set --exclude_bg to exclude background segmentations masks from the evaluation.
 
+
 ## Leaderboard
 Analysis of SOTA object-centric representation learning models for MOT. Results shown as mean ± standard deviation of three runs with different random training seeds. Models ranked according to MOTA for each dataset.
 If you want to add your own method and results on any of the three datasets, please open a pull request where you add the results in the tables below. 
+
 
 ### SpMOT
 
