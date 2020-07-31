@@ -1,0 +1,1 @@
+{"task": "sprite", "train_batch_num": 156, "test_batch_num": 15, "N": 64, "T": 10, "D": 3, "H": 128, "W": 128, "h": 48, "w": 48, "zeta_s": 0.1, "zeta_r": [1, 0.2]}
