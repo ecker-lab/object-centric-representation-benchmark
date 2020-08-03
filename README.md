@@ -6,9 +6,13 @@ __Table of Contents__
 - [Datasets](#datasets)
   * [Extract data](#extract-data)
 - [Training](#training)
-  * [Training ViMON](#vimon)
+  * [Training ViMON](#training-vimon)
+  * [Training OP3](#training-op3)
+  * [Training TBA](#training-tba)
 - [Evaluation](#evaluation)
-  * [Generating ViMON annotation file](#generating-annotation-file)
+  * [Generating ViMON annotation file](#generating-vimon-annotation-file)
+  * [Generating OP3 annotation file](#generating-op3-annotation-file)
+  * [Generating TBA annotation file](#generating-tba-annotation-file)
   * [Evaluating MOT metrics](#evaluating-mot-metrics)
 - [Leaderboard](#leaderboard)
   * [VMDS](#vmds)
@@ -52,6 +56,13 @@ python3 ocrb/vimon/main.py --config='ocrb/vimon/config.json'
 ```
 where hyperparameters are specified in the config file.
 
+### Training OP3
+To run OP3 training:
+```
+python3 ocrb/op3/main.py --va vmds
+```
+where the --va flag can be toggled between vmds, vor, and spmot. Hyperparameters for each can be found in the corresponding [file](https://github.com/ecker-lab/object-centric-representation-benchmark/blob/master/ocrb/op3/exp_variants/variants.py). For details see the [original OP3 repository.](https://github.com/jcoreyes/OP3)
+
 
 ### Training TBA
 For TBA training, the input datasets need to be pre-processed into batches, for which we provide a function:
@@ -72,6 +83,13 @@ To generate annotation file with mask and object id predictions per frame for ea
 python3 ocrb/vimon/generate_pred_json.py --config='ocrb/vimon/config.json' --ckpt_file='ocrb/vimon/ckpts/pretrained/ckpt_vimon_vmds.pt' --out_path='ocrb/vimon/ckpts/pretrained/vmds_pred_list.json'
 ```
 where hyperparameters including dataset are specified in ocrb/vimon/config.json file and --ckpt_file gives the path to the trained model weights.
+
+### Generating OP3 annotation file
+To generate annotation file with mask and object id predictions per frame for each video in the test set, run:
+```
+python3 ocrb/op3/generate_pred_json.py --va vmds --ckpt_file='ocrb/op3/ckpts/vmds_params.pkl' --out_path='ocrb/op3/ckpts/vmds_pred_list.json'
+```
+where hyperparameters can be found in the corresponding [file](https://github.com/ecker-lab/object-centric-representation-benchmark/blob/master/ocrb/op3/exp_variants/variants.py) and --ckpt_file gives the path to the trained model weights. For details see the [original OP3 repository.](https://github.com/jcoreyes/OP3)
 
 
 ### Generating TBA annotation file
