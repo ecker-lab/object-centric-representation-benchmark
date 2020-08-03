@@ -26,7 +26,7 @@ def exclude_bg(dists, gt_ids, pred_ids, n_gt_bg):
         if dists.shape[1] > 0:
             pred_bg_id = np.where(dists[gt_idx] > 0.2)[0]
             dists = np.delete(dists, pred_bg_id, 1)
-            pred_ids = [pi for l,pi in enumerate(pred_ids) if not l in pred_bg_id]
+            pred_ids = [pi for l, pi in enumerate(pred_ids) if not l in pred_bg_id]
         dists = np.delete(dists, gt_idx, 0)  
         del gt_ids[gt_idx]   
     return dists, gt_ids, pred_ids
