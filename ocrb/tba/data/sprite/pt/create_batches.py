@@ -1,29 +1,40 @@
 import numpy as np
 np.random.seed(1)
 import torch
+import argparse
 
-BATCH_SIZE = 1
 FRAMES = 10
 
-# train_data = np.load('multidsprites_videos_train_black_bg2.npy')
-# np.random.shuffle(train_data)
-val_data = np.load('multidsprites_videos_test_sym_black_bg.npy')
+parser = argparse.ArgumentParser()
+parser.add_argument('--batch_size', help='Batch size.', type=int, default=1)
+parser.add_argument('--dataset', help='Dataset.', type=str, default='vmds')
+parser.add_argument('--mode', help='Train, validation or test set.', type=str, default='train')
 
-# TRAIN_SIZE = len(train_data)//BATCH_SIZE
-VAL_SIZE = len(val_data)//BATCH_SIZE
-_, _, CHANNELS, WIDTH, HEIGHT = val_data.shape
 
-# for batch_number in range(TRAIN_SIZE):
-#     batch = torch.Tensor(train_data[batch_number*BATCH_SIZE:(batch_number+1)*BATCH_SIZE, :FRAMES]).view(-1, CHANNELS, WIDTH, HEIGHT)
-#     batch = torch.nn.functional.interpolate(batch, scale_factor=2).view(BATCH_SIZE, FRAMES, CHANNELS, WIDTH*2, HEIGHT*2)
-#     filename = 'input/train_' + str(batch_number) + '.pt'
-#     print(filename, batch.shape)
-#     torch.save(batch.type(torch.uint8), filename)
+def main(args):
+    assert args.mode in ['train', 'val', 'test']
+    assert args.dataset in ['vmds', 'vor', 'spmot']
 
-for batch_number in range(VAL_SIZE):
-    batch = torch.Tensor(val_data[batch_number*BATCH_SIZE:(batch_number+1)*BATCH_SIZE, :FRAMES]).view(-1, CHANNELS, WIDTH, HEIGHT)
-    batch = torch.nn.functional.interpolate(batch, scale_factor=2).view(BATCH_SIZE, FRAMES, CHANNELS, WIDTH*2, HEIGHT*2)
-    # filename = 'input/test_' + str(batch_number) + '.pt'
-    filename = 'metric/sym/test_' + str(batch_number) + '.pt'
-    print(filename, batch.shape)
-    torch.save(batch.type(torch.uint8), filename)
+    train = True if args.mode == 'train' else False
+    data = np.load('ocrb/data/datasets/{}_{}.npy'.format(args.dataset, args.mode))
+    
+    if train:
+        np.random.shuffle(data)
+
+    SIZE = len(data) // BATCH_SIZE
+    _, _, CHANNELS, WIDTH, HEIGHT = data.shape
+
+    for batch_number in range(SIZE):
+        batch = torch.Tensor(data[batch_number*BATCH_SIZE:(batch_number+1)*BATCH_SIZE, :FRAMES]).view(-1, CHANNELS, WIDTH, HEIGHT)
+        batch = torch.nn.functional.interpolate(batch, scale_factor=2).view(BATCH_SIZE, FRAMES, CHANNELS, WIDTH*2, HEIGHT*2)
+        if args.mode == 'train' or args.mode == 'val':
+            filename = 'input/{}_'.format(args.mode) + str(batch_number) + '.pt'
+        else:
+            filename = 'metric/test_' + str(batch_number) + '.pt'
+        print(filename, batch.shape)
+        torch.save(batch.type(torch.uint8), filename)
+
+    
+if __name__ == '__main__':    
+    args = parser.parse_args()
+    main(args)
