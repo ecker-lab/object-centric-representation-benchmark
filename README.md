@@ -1,6 +1,8 @@
 # Object-centric Representation Benchmark
 This repository contains code, data and a benchmark leaderboard from the paper [Unmasking the Inductive Biases of Unsupervised Object Representations for Video Sequences](https://arxiv.org/abs/2006.07034) by M.A. Weis, K. Chitta, Y. Sharma, W. Brendel, M. Bethge, A. Geiger and A.S. Ecker (2020).
 
+Code for training OP3 and TBA was adapted using: [OP3 codebase](https://github.com/jcoreyes/OP3) and [TBA codebase](https://github.com/zhen-he/tracking-by-animation).
+
 __Table of Contents__
 - [Installation](#installation)
 - [Datasets](#datasets)
