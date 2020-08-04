@@ -14,8 +14,8 @@ from modules.net import Net
 # Parse arguments
 parser = argparse.ArgumentParser()
 # Task
-parser.add_argument('--task', default='duke', choices=['mnist', 'sprite', 'spmot', 'vor', 'duke'],
-                    help="Choose a task from mnist/sprite/spmot/vor/duke")
+parser.add_argument('--task', default='vmds', choices=['vmds', 'spmot', 'vor'],
+                    help="Choose a task from vmds/spmot/vor")
 parser.add_argument('--subtask', default='',
                     help="Choose a subtask for duke, from camera1 to camera8 ('' for all cameras)")
 parser.add_argument('--exp', default='tba',
@@ -61,17 +61,17 @@ o = parser.parse_args()
 
 
 metric_dir = 'metric' if o.metric == 1 else ''
-data_dir = path.join('data', o.task, 'pt', o.subtask, metric_dir)
-result_dir = path.join('result', o.task, o.exp, o.model)
+data_dir = path.join('ocrb/tba/data', o.task, 'pt', o.subtask, metric_dir)
+result_dir = path.join('ocrb/tba/result', o.task, o.exp, o.model)
 utils.mkdir(result_dir)
 result_file_header = path.join(result_dir, 'sp_')
 if o.metric == 1:
     o.train = 0
     if o.v == 0:
-        o.result_metric_dir = path.join('result', o.task, o.subtask, o.exp, o.model, metric_dir);
+        o.result_metric_dir = path.join('ocrb/tba/result', o.task, o.subtask, o.exp, o.model, metric_dir);
         utils.rmdir(o.result_metric_dir); utils.mkdir(o.result_metric_dir)
     elif o.v == 2:
-        o.pic_dir = path.join('pic', o.task, o.subtask, o.exp, o.model, metric_dir)
+        o.pic_dir = path.join('ocrb/tba/pic', o.task, o.subtask, o.exp, o.model, metric_dir)
         utils.rmdir(o.pic_dir); utils.mkdir(o.pic_dir)
 
 
@@ -82,18 +82,18 @@ for k, v in data_config.items():
     vars(o)[k] = v
 print("Task: " + o.task)
 # Load experiment configuration
-o.exp_config = utils.load_json('modules/exp_config.json')[o.exp]
+o.exp_config = utils.load_json('ocrb/tba/modules/exp_config.json')[o.exp]
 print("Experiment: " + o.exp)
 print("Configuration: ", o.exp_config)
 # Load model configuration
-model_config = utils.load_json('modules/model_config.json')[o.task]["default"]
+model_config = utils.load_json('ocrb/tba/modules/model_config.json')[o.task]["default"]
 if o.model != 'default':
-    model_config.update(utils.load_json('modules/model_config.json')[o.task][o.model])
+    model_config.update(utils.load_json('ocrb/tba/modules/model_config.json')[o.task][o.model])
 for k, v in model_config.items():
     vars(o)[k] = v
 print("Model: " + o.model)
 # Set other hyper-parameters
-if o.task in ['mnist', 'sprite', 'spmot', 'vor']:
+if o.task in ['vmds', 'spmot', 'vor']:
     o.bg = 0
 elif o.task in ['duke']:
     o.bg = 1
