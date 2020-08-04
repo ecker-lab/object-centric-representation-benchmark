@@ -16,7 +16,7 @@ install_requires = [
 
 
 setup(name='ocrb', 
-        version='1.0',
+        version='0.1',
         description="Object-centric Representation Benchmark (OCRB) contains code, data and a benchmark leaderboard from the paper 'Unmasking the Inductive Biases of Unsupervised Object Representations for Video Sequences'",
         author="Marissa Weis",
         author_email="marissa.weis@bethgelab.org",
