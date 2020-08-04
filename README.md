@@ -69,11 +69,11 @@ where the --va flag can be toggled between vmds, vor, and spmot. Hyperparameters
 ### Training TBA
 For TBA training, the input datasets need to be pre-processed into batches, for which we provide a function:
 ```
-python3 ocrb/tba/data/sprite/pt/create_batches.py
+python3 ocrb/tba/data/create_batches.py --batch_size=64 --dataset='vmds' --mode='train'
 ```
 To run training:
 ```
-python3 ocrb/tba/run.py --task sprite
+python3 ocrb/tba/run.py --task vmds
 ```
 the --task flag can be toggled between sprite (VMDS), spmot (SpMOT) and vor (VOR). For details regarding other training flags see the [original TBA repository.](https://github.com/zhen-he/tracking-by-animation)
 
