@@ -85,18 +85,13 @@ class Net(nn.Module):
 
             loss = nn.functional.mse_loss(downsampled_pred, downsampled_target, reduction='sum')/8
 
-            video = {}
-            video['class'] = 'video'
-            video['filename'] = 'video_id_{}'.format(o.batch_id)
-
             ka = {'X': X_seq, 'X_r': X_r_seq, 'y_e': y_e_seq, 'y_l': y_l_seq, 'y_p': y_p_seq,
                   'Y_s': Y_s_seq, 'Y_a': Y_a_seq}
             if o.bg == 1:
                 ka['Y_b'] = Y_b_seq
                 if o.metric == 1:
                     ka['X_org'] = kwargs['X_org_seq']
-            frames = self.visualize(**ka)
-            video['frames'] = frames
+            video = self.visualize(**ka)
 
             return loss, video
 
@@ -129,7 +124,7 @@ class Net(nn.Module):
         # print(mem_min, mem_max)
         mem = (mem - mem_min) / (mem_max - mem_min + 1e-20)
 
-        frames = []
+        video = []
         for t in range(0, o.T):
             tao = o.batch_id * o.T + t
 
@@ -193,23 +188,18 @@ class Net(nn.Module):
             X_s_s_pool = (1-nn.functional.max_pool2d(1-X_s_s, 2)).reshape(o.O, o.H//2, o.W//2)
 
             frame = {}
-            frame['timestamp'] = int(t)
-            frame['num'] = int(tao)
-            frame['class'] = 'frame'
-
-            annotations = []
+            masks = []
+            ids = []
             for j in range(0,o.O):
                 bin_img = X_s_s_pool[j].cpu().numpy().astype(np.int)
                 if bin_img.sum() == 0:
                     continue
                 else:
-                    annotation = {
-                        'mask': utils.rle_encode(bin_img),
-                        'id': int(o.O * o.batch_id + j),
-                    }
-                    annotations.append(annotation)
-            frame['annotations'] = annotations
-            frames.append(frame)
+                    masks.append(utils.rle_encode(bin_img))
+                    ids.append(int(o.O * o.batch_id + j))
+            frame['masks'] = masks
+            frame['ids'] = ids
+            video.append(frame)
 
             X_s_s_pool = X_s_s_pool.reshape(o.O*o.H//2, o.W//2, 1).repeat(1, 1, 3)
             if o.v == 2:
@@ -231,7 +221,7 @@ class Net(nn.Module):
                     utils.imwrite(att_c, path.join(save_dir, 'att', "%05d" % (tao)))
                     utils.imwrite(mem_c, path.join(save_dir, 'mem', "%05d" % (tao)))
 
-        return frames
+        return video
 
 
     def reset_states(self):
