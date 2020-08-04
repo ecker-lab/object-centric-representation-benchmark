@@ -15,7 +15,7 @@
         }
     },
 
-    "sprite": {
+    "vmds": {
         "default": {
             "O": 5,
             "dim_y_l": 4,
