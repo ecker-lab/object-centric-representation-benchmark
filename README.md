@@ -75,7 +75,7 @@ To run training:
 ```
 python3 ocrb/tba/run.py --task vmds
 ```
-the --task flag can be toggled between sprite (VMDS), spmot (SpMOT) and vor (VOR). For details regarding other training flags see the [original TBA repository.](https://github.com/zhen-he/tracking-by-animation)
+the --task flag can be toggled between vmds, spmot and vor. For details regarding other training flags see the [original TBA repository.](https://github.com/zhen-he/tracking-by-animation)
 
     
 ## Evaluation
