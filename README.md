@@ -97,7 +97,7 @@ where hyperparameters can be found in the corresponding [file](https://github.co
 ### Generating TBA annotation file
 To generate annotation file for TBA, run:
 ```
-python3 ocrb/tba/run.py --task sprite --metric 1 --v 2 --init_model sp_latest.pt
+python3 ocrb/tba/run.py --task vmds --metric 1 --v 2 --init_model sp_latest.pt
 ```
 The annotation file is generated in the folder ocrb/tba/pic. For details regarding other evaluation flags see the [original TBA repository.](https://github.com/zhen-he/tracking-by-animation)
 
