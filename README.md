@@ -127,7 +127,7 @@ Rank | Model | Reference | MOTA &uarr; | MOTP &uarr; | MD &uarr; | MT &uarr; | M
 
 ### VMDS
 
-Rank | Model | Reference | MOTA &uarr; | MOTP &uarr; | MD &uarr; | MT &uarr; | Match &uarr; | Miss &darr; | ID S. &udrr; | FPs &darr; | MSE &darr; |
+Rank | Model | Reference | MOTA &uarr; | MOTP &uarr; | MD &uarr; | MT &uarr; | Match &uarr; | Miss &darr; | ID S. &darr; | FPs &darr; | MSE &darr; |
 :---:|:------:|:---------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
 1 | OP3 | Veerapaneni et al. 2019 | **91.7&nbsp;±&nbsp;1.7** | **93.6&nbsp;±&nbsp;0.4** | **96.8&nbsp;±&nbsp;0.5** | **96.3&nbsp;±&nbsp;0.4** | **97.8&nbsp;±&nbsp;0.1** | **2.0&nbsp;±&nbsp;0.1** | **0.2&nbsp;±&nbsp;0.0** | 6.1&nbsp;±&nbsp;1.5 |**4.3&nbsp;±&nbsp;0.2** |
 2 | ViMON | Weis et al. 2020 | 86.8&nbsp;±&nbsp;0.3 | 86.8&nbsp;±&nbsp;0.0 | 86.2&nbsp;±&nbsp;0.3 | 85.0&nbsp;±&nbsp;0.3 | 92.3&nbsp;±&nbsp;0.2 | 7.0&nbsp;±&nbsp;0.2 | 0.7&nbsp;±&nbsp;0.0 | **5.5&nbsp;±&nbsp;0.1** | 10.7&nbsp;±&nbsp;0.1 |
