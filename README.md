@@ -137,7 +137,7 @@ Rank | Model | Reference | MOTA &uarr; | MOTP &uarr; | MD &uarr; | MT &uarr; | M
 
 ### VOR
 
-Rank | Model | Reference | MOTA &uarr; | MOTP &darr; | MD &uarr; | MT &uarr; | Match &uarr; | Miss &darr; | ID S. &uarr; | FPs &uarr; | MSE &uarr; |
+Rank | Model | Reference | MOTA &uarr; | MOTP &uarr; | MD &uarr; | MT &uarr; | Match &uarr; | Miss &darr; | ID S. &darr; | FPs &darr; | MSE &darr; |
 :---:|:------:|:---------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
 1 | ViMON | Weis et al. 2020 | **89.0&nbsp;±&nbsp;0.0** | **89.5&nbsp;±&nbsp;0.5** | **90.4&nbsp;±&nbsp;0.5** | **90.0&nbsp;±&nbsp;0.4** | **93.2&nbsp;±&nbsp;0.4** | **6.5&nbsp;±&nbsp;0.4** | **0.3&nbsp;±&nbsp;0.0** | **4.2&nbsp;±&nbsp;0.4** | 6.4&nbsp;±&nbsp;0.6 |
 2 | OP3 | Veerapaneni et al. 2019 | 65.4&nbsp;±&nbsp;0.6 | 89.0&nbsp;±&nbsp;0.6 | 88.0&nbsp;±&nbsp;0.6 | 85.4&nbsp;±&nbsp;0.5 | 90.7&nbsp;±&nbsp;0.3 | 8.2&nbsp;±&nbsp;0.4 | 1.1&nbsp;±&nbsp;0.2 | 25.3&nbsp;±&nbsp;0.6 | **3.0&nbsp;±&nbsp;0.1** |
