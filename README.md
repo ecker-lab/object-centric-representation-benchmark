@@ -117,7 +117,7 @@ If you want to add your own method and results on any of the three datasets, ple
 
 ### SpMOT
 
-Rank | Model | Reference | MOTA &uarr; | MOTP &darr; | MD &uarr; | MT &uarr; | Match &uarr; | Miss &darr; | ID S. &uarr; | FPs &uarr; | MSE &uarr; |
+Rank | Model | Reference | MOTA &uarr; | MOTP &uarr; | MD &uarr; | MT &uarr; | Match &uarr; | Miss &darr; | ID S. &darr; | FPs &darr; | MSE &darr; |
 :---:|:------:|:---------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
 1 | ViMON | Weis et al. 2020 | **92.9&nbsp;±&nbsp;0.2** | **91.8&nbsp;±&nbsp;0.2** | 87.7&nbsp;±&nbsp;0.8 | 87.2&nbsp;±&nbsp;0.8 | 95.0&nbsp;±&nbsp;0.2 | 4.8&nbsp;±&nbsp;0.2 | **0.2&nbsp;±&nbsp;0.0** | **2.1&nbsp;±&nbsp;0.1** | **11.1&nbsp;±&nbsp;0.6** |
 2 | OP3 | Veerapaneni et al. 2019 | 89.1&nbsp;±&nbsp;5.1 | 78.4&nbsp;±&nbsp;2.4 | **92.4&nbsp;±&nbsp;4.0** | **91.8&nbsp;±&nbsp;3.8** | **95.9&nbsp;±&nbsp;2.2** | **3.7&nbsp;±&nbsp;2.2** | 0.4&nbsp;±&nbsp;0.0 | 6.8&nbsp;±&nbsp;2.9 | 13.3&nbsp;±&nbsp;11.9 |
@@ -127,7 +127,7 @@ Rank | Model | Reference | MOTA &uarr; | MOTP &darr; | MD &uarr; | MT &uarr; | M
 
 ### VMDS
 
-Rank | Model | Reference | MOTA &uarr; | MOTP &darr; | MD &uarr; | MT &uarr; | Match &uarr; | Miss &darr; | ID S. &uarr; | FPs &uarr; | MSE &uarr; |
+Rank | Model | Reference | MOTA &uarr; | MOTP &uarr; | MD &uarr; | MT &uarr; | Match &uarr; | Miss &darr; | ID S. &udrr; | FPs &darr; | MSE &darr; |
 :---:|:------:|:---------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
 1 | OP3 | Veerapaneni et al. 2019 | **91.7&nbsp;±&nbsp;1.7** | **93.6&nbsp;±&nbsp;0.4** | **96.8&nbsp;±&nbsp;0.5** | **96.3&nbsp;±&nbsp;0.4** | **97.8&nbsp;±&nbsp;0.1** | **2.0&nbsp;±&nbsp;0.1** | **0.2&nbsp;±&nbsp;0.0** | 6.1&nbsp;±&nbsp;1.5 |**4.3&nbsp;±&nbsp;0.2** |
 2 | ViMON | Weis et al. 2020 | 86.8&nbsp;±&nbsp;0.3 | 86.8&nbsp;±&nbsp;0.0 | 86.2&nbsp;±&nbsp;0.3 | 85.0&nbsp;±&nbsp;0.3 | 92.3&nbsp;±&nbsp;0.2 | 7.0&nbsp;±&nbsp;0.2 | 0.7&nbsp;±&nbsp;0.0 | **5.5&nbsp;±&nbsp;0.1** | 10.7&nbsp;±&nbsp;0.1 |
