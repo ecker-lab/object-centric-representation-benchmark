@@ -1,5 +1,5 @@
 # Object-centric Representation Benchmark
-This repository contains code, data and a benchmark leaderboard from the paper [Benchmarking Unsupervised Object Representations](https://arxiv.org/abs/2006.07034) by M.A. Weis, K. Chitta, Y. Sharma, W. Brendel, M. Bethge, A. Geiger and A.S. Ecker (2021).
+This repository contains code, data and a benchmark leaderboard from the paper [Benchmarking Unsupervised Object Representations for Video Sequences](https://arxiv.org/abs/2006.07034) by M.A. Weis, K. Chitta, Y. Sharma, W. Brendel, M. Bethge, A. Geiger and A.S. Ecker (2021).
 
 Code for training OP3, TBA and SCALOR was adapted using: [OP3 codebase](https://github.com/jcoreyes/OP3), [TBA codebase](https://github.com/zhen-he/tracking-by-animation) and [SCALOR codebase](https://github.com/JindongJiang/SCALOR).
 
@@ -171,7 +171,7 @@ If you use this repository in your research, please cite:
 ```
 @misc{Weis2020,
     Author = {Marissa A. Weis and Kashyap Chitta and Yash Sharma and Wieland Brendel and Matthias Bethge and Andreas Geiger and Alexander S. Ecker},
-    Title = {Benchmarking Unsupervised Object Representations},
+    Title = {Benchmarking Unsupervised Object Representations for Video Sequences},
     Year = {2021},
     Eprint = {arXiv:2006.07034},
 }
