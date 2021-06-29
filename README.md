@@ -1,7 +1,7 @@
 # Object-centric Representation Benchmark
-This repository contains code, data and a benchmark leaderboard from the paper [Unmasking the Inductive Biases of Unsupervised Object Representations for Video Sequences](https://arxiv.org/abs/2006.07034) by M.A. Weis, K. Chitta, Y. Sharma, W. Brendel, M. Bethge, A. Geiger and A.S. Ecker (2020).
+This repository contains code, data and a benchmark leaderboard from the paper [Benchmarking Unsupervised Object Representations](https://arxiv.org/abs/2006.07034) by M.A. Weis, K. Chitta, Y. Sharma, W. Brendel, M. Bethge, A. Geiger and A.S. Ecker (2021).
 
-Code for training OP3 and TBA was adapted using: [OP3 codebase](https://github.com/jcoreyes/OP3) and [TBA codebase](https://github.com/zhen-he/tracking-by-animation).
+Code for training OP3, TBA and SCALOR was adapted using: [OP3 codebase](https://github.com/jcoreyes/OP3), [TBA codebase](https://github.com/zhen-he/tracking-by-animation) and [SCALOR codebase](https://github.com/JindongJiang/SCALOR).
 
 __Table of Contents__
 - [Installation](#installation)
@@ -39,7 +39,14 @@ __Available datasets:__
 - Sprites-MOT (SpMOT)
 - Video Object Room (VOR)
 
-![Datasets](example_dataset.png?raw=true "Title")
+![Datasets](img/example_dataset.png?raw=true "Title")
+
+
+- Textured Video Multi-dSprites (texVMDS)
+
+![alt text](img/tex_vmds_0.gif) &nbsp;&nbsp;&nbsp;&nbsp;
+![alt text](img/tex_vmds_1.gif) &nbsp;&nbsp;&nbsp;&nbsp;
+![alt text](img/tex_vmds_2.gif)
 
 
 
@@ -119,10 +126,11 @@ If you want to add your own method and results on any of the three datasets, ple
 
 Rank | Model | Reference | MOTA &uarr; | MOTP &uarr; | MD &uarr; | MT &uarr; | Match &uarr; | Miss &darr; | ID S. &darr; | FPs &darr; | MSE &darr; |
 :---:|:------:|:---------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
-1 | ViMON | Weis et al. 2020 | **92.9&nbsp;±&nbsp;0.2** | **91.8&nbsp;±&nbsp;0.2** | 87.7&nbsp;±&nbsp;0.8 | 87.2&nbsp;±&nbsp;0.8 | 95.0&nbsp;±&nbsp;0.2 | 4.8&nbsp;±&nbsp;0.2 | **0.2&nbsp;±&nbsp;0.0** | **2.1&nbsp;±&nbsp;0.1** | **11.1&nbsp;±&nbsp;0.6** |
-2 | OP3 | Veerapaneni et al. 2019 | 89.1&nbsp;±&nbsp;5.1 | 78.4&nbsp;±&nbsp;2.4 | **92.4&nbsp;±&nbsp;4.0** | **91.8&nbsp;±&nbsp;3.8** | **95.9&nbsp;±&nbsp;2.2** | **3.7&nbsp;±&nbsp;2.2** | 0.4&nbsp;±&nbsp;0.0 | 6.8&nbsp;±&nbsp;2.9 | 13.3&nbsp;±&nbsp;11.9 |
-3 | TBA | He et al. 2019 | 79.7&nbsp;±&nbsp;15.0 | 71.2&nbsp;±&nbsp;0.3 | 83.4&nbsp;±&nbsp;9.7 | 80.0&nbsp;±&nbsp;13.6 | 87.8&nbsp;±&nbsp;9.0 | 9.6&nbsp;±&nbsp;6.0 | 2.6&nbsp;±&nbsp;3.0 | 8.1&nbsp;±&nbsp;6.0 | 11.9&nbsp;±&nbsp;1.9 |
-4 | MONet | Burgess et al. 2019 | 70.2&nbsp;±&nbsp;0.8 | 89.6&nbsp;±&nbsp;1.0 | **92.4&nbsp;±&nbsp;0.6** | 50.4&nbsp;±&nbsp;2.4 | 75.3&nbsp;±&nbsp;1.3 | 4.4&nbsp;±&nbsp;0.4 | 20.3&nbsp;±&nbsp;1.6 | 5.1&nbsp;±&nbsp;0.5 | 13.0&nbsp;±&nbsp;2.0 |
+1 | SCALOR | Jiang et al. 2020 | **94.9&nbsp;±&nbsp;0.5** | 80.2&nbsp;±&nbsp;0.1 | **96.4&nbsp;±&nbsp;0.1** | **93.2&nbsp;±&nbsp;0.7** | **95.9&nbsp;±&nbsp;0.4** | **2.4&nbsp;±&nbsp;0.0** | **1.7&nbsp;±&nbsp;0.4** | **1.0&nbsp;±&nbsp;0.1** | **3.4&nbsp;±&nbsp;0.1** |
+2 | ViMON | Weis et al. 2020 | 92.9&nbsp;±&nbsp;0.2 | **91.8&nbsp;±&nbsp;0.2** | 87.7&nbsp;±&nbsp;0.8 | 87.2&nbsp;±&nbsp;0.8 | **95.0&nbsp;±&nbsp;0.2** | 4.8&nbsp;±&nbsp;0.2 | **0.2&nbsp;±&nbsp;0.0** | 2.1&nbsp;±&nbsp;0.1 | 11.1&nbsp;±&nbsp;0.6 |
+3 | OP3 | Veerapaneni et al. 2019 | 89.1&nbsp;±&nbsp;5.1 | 78.4&nbsp;±&nbsp;2.4 | 92.4&nbsp;±&nbsp;4.0 | 91.8&nbsp;±&nbsp;3.8 | 95.9&nbsp;±&nbsp;2.2 | 3.7&nbsp;±&nbsp;2.2 | 0.4&nbsp;±&nbsp;0.0 | 6.8&nbsp;±&nbsp;2.9 | 13.3&nbsp;±&nbsp;11.9 |
+4 | TBA | He et al. 2019 | 79.7&nbsp;±&nbsp;15.0 | 71.2&nbsp;±&nbsp;0.3 | 83.4&nbsp;±&nbsp;9.7 | 80.0&nbsp;±&nbsp;13.6 | 87.8&nbsp;±&nbsp;9.0 | 9.6&nbsp;±&nbsp;6.0 | 2.6&nbsp;±&nbsp;3.0 | 8.1&nbsp;±&nbsp;6.0 | 11.9&nbsp;±&nbsp;1.9 |
+5 | MONet | Burgess et al. 2019 | 70.2&nbsp;±&nbsp;0.8 | 89.6&nbsp;±&nbsp;1.0 | 92.4&nbsp;±&nbsp;0.6 | 50.4&nbsp;±&nbsp;2.4 | 75.3&nbsp;±&nbsp;1.3 | 4.4&nbsp;±&nbsp;0.4 | 20.3&nbsp;±&nbsp;1.6 | 5.1&nbsp;±&nbsp;0.5 | 13.0&nbsp;±&nbsp;2.0 |
 
 
 ### VMDS
@@ -130,18 +138,31 @@ Rank | Model | Reference | MOTA &uarr; | MOTP &uarr; | MD &uarr; | MT &uarr; | M
 Rank | Model | Reference | MOTA &uarr; | MOTP &uarr; | MD &uarr; | MT &uarr; | Match &uarr; | Miss &darr; | ID S. &darr; | FPs &darr; | MSE &darr; |
 :---:|:------:|:---------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
 1 | OP3 | Veerapaneni et al. 2019 | **91.7&nbsp;±&nbsp;1.7** | **93.6&nbsp;±&nbsp;0.4** | **96.8&nbsp;±&nbsp;0.5** | **96.3&nbsp;±&nbsp;0.4** | **97.8&nbsp;±&nbsp;0.1** | **2.0&nbsp;±&nbsp;0.1** | **0.2&nbsp;±&nbsp;0.0** | 6.1&nbsp;±&nbsp;1.5 |**4.3&nbsp;±&nbsp;0.2** |
-2 | ViMON | Weis et al. 2020 | 86.8&nbsp;±&nbsp;0.3 | 86.8&nbsp;±&nbsp;0.0 | 86.2&nbsp;±&nbsp;0.3 | 85.0&nbsp;±&nbsp;0.3 | 92.3&nbsp;±&nbsp;0.2 | 7.0&nbsp;±&nbsp;0.2 | 0.7&nbsp;±&nbsp;0.0 | **5.5&nbsp;±&nbsp;0.1** | 10.7&nbsp;±&nbsp;0.1 |
-3 | TBA | He et al. 2019 | 54.5&nbsp;±&nbsp;12.1 | 75.0&nbsp;±&nbsp;0.9 | 62.9&nbsp;±&nbsp;5.9 | 58.3&nbsp;±&nbsp;6.1 | 75.9&nbsp;±&nbsp;4.3 | 21.0&nbsp;±&nbsp;4.2 | 3.2&nbsp;±&nbsp;0.3 | 21.4&nbsp;±&nbsp;7.8 | 28.1&nbsp;±&nbsp;2.0 |
-4 | MONet | Burgess et al. 2019 | 49.4&nbsp;±&nbsp;3.6 | 78.6&nbsp;±&nbsp;1.8 | 74.2&nbsp;±&nbsp;1.7 | 35.7&nbsp;±&nbsp;0.8 | 66.7&nbsp;±&nbsp;0.7 | 13.6&nbsp;±&nbsp;1.0 | 19.7&nbsp;±&nbsp;0.6 | 17.2&nbsp;±&nbsp;3.1 | 22.2&nbsp;±&nbsp;2.2 |
+2 | ViMON | Weis et al. 2020 | 86.8&nbsp;±&nbsp;0.3 | 86.8&nbsp;±&nbsp;0.0 | 86.2&nbsp;±&nbsp;0.3 | 85.0&nbsp;±&nbsp;0.3 | 92.3&nbsp;±&nbsp;0.2 | 7.0&nbsp;±&nbsp;0.2 | 0.7&nbsp;±&nbsp;0.0 | 5.5&nbsp;±&nbsp;0.1 | 10.7&nbsp;±&nbsp;0.1 |
+3 | SCALOR | Jiang et al. 2020 | 74.1&nbsp;±&nbsp;1.2 | 87.6&nbsp;±&nbsp;0.4 | 67.9&nbsp;±&nbsp;1.1 | 66.7&nbsp;±&nbsp;1.1 | 78.4&nbsp;±&nbsp;1.0 | 20.7&nbsp;±&nbsp;1.0 | 0.8&nbsp;±&nbsp;0.0 | **4.4&nbsp;±&nbsp;0.4** | 14.0&nbsp;±&nbsp;0.1 |
+4 | TBA | He et al. 2019 | 54.5&nbsp;±&nbsp;12.1 | 75.0&nbsp;±&nbsp;0.9 | 62.9&nbsp;±&nbsp;5.9 | 58.3&nbsp;±&nbsp;6.1 | 75.9&nbsp;±&nbsp;4.3 | 21.0&nbsp;±&nbsp;4.2 | 3.2&nbsp;±&nbsp;0.3 | 21.4&nbsp;±&nbsp;7.8 | 28.1&nbsp;±&nbsp;2.0 |
+5 | MONet | Burgess et al. 2019 | 49.4&nbsp;±&nbsp;3.6 | 78.6&nbsp;±&nbsp;1.8 | 74.2&nbsp;±&nbsp;1.7 | 35.7&nbsp;±&nbsp;0.8 | 66.7&nbsp;±&nbsp;0.7 | 13.6&nbsp;±&nbsp;1.0 | 19.7&nbsp;±&nbsp;0.6 | 17.2&nbsp;±&nbsp;3.1 | 22.2&nbsp;±&nbsp;2.2 |
 
 
 ### VOR
 
 Rank | Model | Reference | MOTA &uarr; | MOTP &uarr; | MD &uarr; | MT &uarr; | Match &uarr; | Miss &darr; | ID S. &darr; | FPs &darr; | MSE &darr; |
 :---:|:------:|:---------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
-1 | ViMON | Weis et al. 2020 | **89.0&nbsp;±&nbsp;0.0** | **89.5&nbsp;±&nbsp;0.5** | **90.4&nbsp;±&nbsp;0.5** | **90.0&nbsp;±&nbsp;0.4** | **93.2&nbsp;±&nbsp;0.4** | **6.5&nbsp;±&nbsp;0.4** | **0.3&nbsp;±&nbsp;0.0** | **4.2&nbsp;±&nbsp;0.4** | 6.4&nbsp;±&nbsp;0.6 |
-2 | OP3 | Veerapaneni et al. 2019 | 65.4&nbsp;±&nbsp;0.6 | 89.0&nbsp;±&nbsp;0.6 | 88.0&nbsp;±&nbsp;0.6 | 85.4&nbsp;±&nbsp;0.5 | 90.7&nbsp;±&nbsp;0.3 | 8.2&nbsp;±&nbsp;0.4 | 1.1&nbsp;±&nbsp;0.2 | 25.3&nbsp;±&nbsp;0.6 | **3.0&nbsp;±&nbsp;0.1** |
-3 | MONet | Burgess et al. 2019 | 37.0&nbsp;±&nbsp;6.8 | 81.7&nbsp;±&nbsp;0.5 | 76.9&nbsp;±&nbsp;2.2 | 37.3&nbsp;±&nbsp;7.8 | 64.4&nbsp;±&nbsp;5.0 | 15.8&nbsp;±&nbsp;1.6 | 19.8&nbsp;±&nbsp;3.5 | 27.4&nbsp;±&nbsp;2.3 | 12.2&nbsp;±&nbsp;1.4 |
+1 | ViMON | Weis et al. 2020 | **89.0&nbsp;±&nbsp;0.0** | **89.5&nbsp;±&nbsp;0.5** | **90.4&nbsp;±&nbsp;0.5** | **90.0&nbsp;±&nbsp;0.4** | **93.2&nbsp;±&nbsp;0.4** | **6.5&nbsp;±&nbsp;0.4** | 0.3&nbsp;±&nbsp;0.0 | 4.2&nbsp;±&nbsp;0.4 | 6.4&nbsp;±&nbsp;0.6 |
+2 | SCALOR | Jiang et al. 2020 | 74.6&nbsp;±&nbsp;0.4 | 86.0&nbsp;±&nbsp;0.2 | 76.0&nbsp;±&nbsp;0.4 | 75.9&nbsp;±&nbsp;0.4 | 77.9&nbsp;±&nbsp;0.4 | 22.1&nbsp;±&nbsp;0.4 | **0.0&nbsp;±&nbsp;0.0** | **3.3&nbsp;±&nbsp;0.2** | 6.4&nbsp;±&nbsp;0.1 |
+3 | OP3 | Veerapaneni et al. 2019 | 65.4&nbsp;±&nbsp;0.6 | 89.0&nbsp;±&nbsp;0.6 | 88.0&nbsp;±&nbsp;0.6 | 85.4&nbsp;±&nbsp;0.5 | 90.7&nbsp;±&nbsp;0.3 | 8.2&nbsp;±&nbsp;0.4 | 1.1&nbsp;±&nbsp;0.2 | 25.3&nbsp;±&nbsp;0.6 | **3.0&nbsp;±&nbsp;0.1** |
+4 | MONet | Burgess et al. 2019 | 37.0&nbsp;±&nbsp;6.8 | 81.7&nbsp;±&nbsp;0.5 | 76.9&nbsp;±&nbsp;2.2 | 37.3&nbsp;±&nbsp;7.8 | 64.4&nbsp;±&nbsp;5.0 | 15.8&nbsp;±&nbsp;1.6 | 19.8&nbsp;±&nbsp;3.5 | 27.4&nbsp;±&nbsp;2.3 | 12.2&nbsp;±&nbsp;1.4 |
+
+
+### texVMDS
+
+Rank | Model | Reference | MOTA &uarr; | MOTP &uarr; | MD &uarr; | MT &uarr; | Match &uarr; | Miss &darr; | ID S. &darr; | FPs &darr; | MSE &darr; |
+:---:|:------:|:---------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
+1 | MONet | Burgess et al. 2019 | **-73.3&nbsp;±&nbsp;5.5** | 67.7&nbsp;±&nbsp;1.1 | 16.0&nbsp;±&nbsp;3.4 | 12.3&nbsp;±&nbsp;3.1 | 24.7&nbsp;±&nbsp;4.7 | 73.1&nbsp;±&nbsp;5.1 | 2.2&nbsp;±&nbsp;0.8 | **98.0&nbsp;±&nbsp;1.7** | 200.5&nbsp;±&nbsp;5.7 |
+2 | ViMON | Weis et al. 2020 | -85.5&nbsp;±&nbsp;2.8 | 69.0&nbsp;±&nbsp;0.6 | 24.2&nbsp;±&nbsp;1.3 | 23.8&nbsp;±&nbsp;1.4 | **34.7&nbsp;±&nbsp;1.7** | **65.0&nbsp;±&nbsp;1.7** | 0.3&nbsp;±&nbsp;0.0 | 120.2&nbsp;±&nbsp;2.5 | 171.4&nbsp;±&nbsp;3.3 |
+3 | SCALOR | Jiang et al. 2020 | -99.2&nbsp;±&nbsp;11.7 | 74.0&nbsp;±&nbsp;0.5 | 6.5&nbsp;±&nbsp;0.6 | 6.3&nbsp;±&nbsp;0.6 | 12.3&nbsp;±&nbsp;0.4 | 87.5&nbsp;±&nbsp;0.4 | **0.2&nbsp;±&nbsp;0.0** | 111.5&nbsp;±&nbsp;11.4 | **133.7&nbsp;±&nbsp;11.1** |
+4 | OP3 | Veerapaneni et al. 2019 | -110.4&nbsp;±&nbsp;4.3 | 70.6&nbsp;±&nbsp;0.6 |16.5&nbsp;±&nbsp;5.1 | 16.2&nbsp;±&nbsp;5.0 | 22.9&nbsp;±&nbsp;6.6 | 76.9&nbsp;±&nbsp;6.7 | **0.2&nbsp;±&nbsp;0.1** | 133.4&nbsp;±&nbsp;2.9 | **132.8&nbsp;±&nbsp;16.2** |
+
 
 
 ## Citation
@@ -150,8 +171,8 @@ If you use this repository in your research, please cite:
 ```
 @misc{Weis2020,
     Author = {Marissa A. Weis and Kashyap Chitta and Yash Sharma and Wieland Brendel and Matthias Bethge and Andreas Geiger and Alexander S. Ecker},
-    Title = {Unmasking the Inductive Biases of Unsupervised Object Representations for Video Sequences},
-    Year = {2020},
+    Title = {Benchmarking Unsupervised Object Representations},
+    Year = {2021},
     Eprint = {arXiv:2006.07034},
 }
 ```
